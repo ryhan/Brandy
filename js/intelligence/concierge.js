@@ -5,6 +5,16 @@
  * Written by Ryhan Hassan
  */
 
+function suggestNames(s){
+
+	return extendDomain(s);
+	/*
+	return _.flatten([
+			extendDomain(s),
+			extendDomain(dropVowels(s))
+		]);
+	*/
+}
 
 /* 
  * Given a string, return a 
@@ -36,8 +46,9 @@ function extendDomain(u)
 
 }
 
-
+/*
 var a = new Markov("Drop kick send twitter", 6),
 	result = '';
 
 a.each(function (v) {	result += v;});
+*/

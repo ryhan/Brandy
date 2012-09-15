@@ -9,28 +9,35 @@
 </head>
 <body>
 
-<!-- Begin Content -->
-<header>
-	<!--<div><img src="img/logo2.png"/></div>-->
-</header>
-<form>
-	<input type="text"/>
-</form>
-<!--
-<form><input id="search" type="search" /></form>
+<!-- BEGIN CONTENT -->
 
-<nav></nav>
--->
+	<div id="results"></div>
+	
+	<div id="top">
+		<header></header>
+		<form>
+			<input id="search" type="text"/>
+		</form>
+	</div>
 
-<!-- Load javascript assets -->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/underscore.js"></script>
-<script type="text/javascript" src="js/mobilify.min.js"></script>
+<!-- BEGIN JAVASCRIPT ASSETS -->
 
-<script type="text/javascript" src="js/search.js"></script>
-<script type="text/javascript" src="js/markov.js"></script>
-<script type="text/javascript" src="js/concierge.js"></script>
-<!-- End javascript -->
+	<!-- Core libraries -->
+	<script type="text/javascript" src="js/core/angular.js"></script>
+	<script type="text/javascript" src="js/core/jquery.js"></script>
+	<script type="text/javascript" src="js/core/underscore.js"></script>
+
+	<!-- UI Effects -->
+	<script type="text/javascript" src="js/ui/mobilify.js"></script>
+	<script type="text/javascript" src="js/ui/searchController.js"></script>
+
+	<!-- Scraping Tools -->
+	<script type="text/javascript" src="js/fetch/domainSearch.js"></script>
+	<script type="text/javascript" src="js/fetch/twitterSearch.js"></script>
+
+	<!-- Suggestion libraries -->
+	<script type="text/javascript" src="js/intelligence/markov.js"></script>
+	<script type="text/javascript" src="js/intelligence/concierge.js"></script>
 
 </body>
 </html>

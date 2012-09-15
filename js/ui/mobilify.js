@@ -17,3 +17,16 @@ var hideAddressBar = function (){
 }
 window.addEventListener("load", function(){ if(!window.pageYOffset){ hideAddressBar(); } } );
 window.addEventListener("orientationchange", hideAddressBar );
+
+/* Optimize the search view */
+$('#search').focus( function(){
+	$('body').addClass('search');
+
+	/*
+	$('header').css({
+		height: '0',
+		opacity: '0'
+	});*/
+	window.scrollTo(0, 1);
+	//document.body.setAttribute('data-view', 'search');
+});
