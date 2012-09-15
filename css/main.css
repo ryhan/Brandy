@@ -1,2 +1,6 @@
-a,article,aside,body,div,footer,html,li,section,span,ul{box-sizing:border-box;margin:0;padding:0;position:relative;}
-body{font-family:Helvetica,arial,sans-serif;font-size:15px;font-weight:300;background-color:#FFF;}
+a,article,aside,body,div,footer,form,html,input,li,section,span,ul{box-sizing:border-box;margin:0;padding:0;position:relative;}
+body{background-color:#FFF;font-family:Helvetica,arial,sans-serif;font-size:15px;font-weight:300;}
+header{height:100px;padding:20px;text-align:center;}header div{border:3px solid #222;}
+header img{margin:22px auto;height:44px;}
+form{left:0;padding:10px 30px;right:0;width:100%;}
+input[type="text"]{background-color:#FFF;border:1px solid #000;box-shadow:inset 0 0 5px rgba(0, 0, 0, 0.2);font-family:Helvetica,arial,sans-serif;font-size:18px;font-weight:300;margin:10px 0;outline:none;padding:10px 20px;width:100%;}
