@@ -1,5 +1,5 @@
 a,article,aside,body,div,footer,form,html,input,li,section,span,ul{box-sizing:border-box;margin:0;padding:0;position:relative;-webkit-transition:all 0.2s;}
-body{background-color:#EEE;font-family:Helvetica,arial,sans-serif;font-size:15px;font-weight:300;min-height:1200px;padding-top:55px;}
+body{background-color:#EEE;font-family:Helvetica,arial,sans-serif;font-size:15px;font-weight:300;min-height:960px;padding-top:55px;}
 #top{background:-webkit-radial-gradient(center 0, 300px 500px, #ffffff, #eeeeee);border-bottom:1px solid rgba(0, 0, 0, 0.3);box-shadow:0 0 10px rgba(0, 0, 0, 0.2);left:0;position:fixed;right:0;top:0;z-index:9000;}
 header{height:100px;padding:20px;text-align:center;-webkit-transition:all 0.2s;}header div{border:3px solid #222;}
 header img{margin:0px auto;width:80%;}

@@ -36,13 +36,18 @@ function updateResults()
 	if (searchModel.query == searchModel.cachedQuery)
 	{
 		searchModel.loadCount += 0.5;
-		//return true;
 	}
 	else
 	{
 		searchModel.loadCount = 1;
 	}
 	searchModel.cachedQuery = searchModel.query;
+
+	if (searchModel.query == "")
+	{
+		$('#results')[0].innerHTML = "";
+		return true;
+	}
 
 	// Make a new request
 
