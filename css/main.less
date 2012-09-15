@@ -90,18 +90,19 @@ li{
 	.availability{
 		color: #666;
 		background-color: #FFF;
-		border: 1px solid #CCC;
+		border: 1px solid #888;
 		border-radius: 4px;
 		
 		font-size: 10px;
 		font-weight: bold;
+		overflow: hidden;
 		position: absolute;
 		text-align: right;
 		top: 12px;
 		right: 10px;
 
 		span{
-			border-right: 1px solid #CCC;
+			border-right: 1px solid #888;
 			display: inline-block;
 			padding: 5px;
 			text-align: center;
@@ -112,6 +113,13 @@ li{
 				background: -webkit-linear-gradient(top, #C8FFDB, #A5FFB3);
 				color: #052918;
 				text-shadow: 0 1px #FFF;
+
+				&:first-child{
+					background-color: #4B87EF;
+					background: -webkit-linear-gradient(top, #ACCDFF, #76A2E7);
+					color: #031947;
+					font-weight: bold;
+				}
 			}
 			&.taken{
 				color: #888;

@@ -10,6 +10,7 @@ searchModel.searchInput = searchModel.$searchInput[0];
 // Caching
 searchModel.cachedQuery = "";
 searchModel.lastUpdate = (new Date()).getTime();
+searchModel.loadCount = 1;
 
 // Define what happens when the input changes
 searchModel.$searchInput.keyup(function() 
@@ -24,14 +25,6 @@ function updateResults()
 {
 	searchModel.query = searchModel.searchInput.value;
 
-	// Check if there has been a change to the query
-	/*
-	if (searchModel.query == searchModel.cachedQuery)
-	{
-		return true;
-	}
-	*/
-
 	// Check if we've given enough time between requests
 	var currentTime = (new Date()).getTime();
 	if (currentTime - searchModel.lastUpdate < 500)
@@ -39,11 +32,23 @@ function updateResults()
 		return true;
 	}
 
+	// Check if there has been a change to the query
+	if (searchModel.query == searchModel.cachedQuery)
+	{
+		searchModel.loadCount += 0.5;
+		//return true;
+	}
+	else
+	{
+		searchModel.loadCount = 1;
+	}
+	searchModel.cachedQuery = searchModel.query;
+
 	// Make a new request
 
 	searchModel.lastUpdate = currentTime;
 	
-	var suggestions = _.map(suggestNames(searchModel.query), function(v)
+	var suggestions = _.first(_.map(suggestNames(searchModel.query), function(v)
 	{
 
 		var highlighted = v.replace(searchModel.query, 
@@ -53,10 +58,7 @@ function updateResults()
 			id: v,
 			text: highlighted
 		};
-
-		//return {text: v};
-		//return {text: v.replace(searchModel.query, "<strong>"+searchModel.query+"</strong")};
-	});
+	}), searchModel.loadCount);
 
 	var ulContainer = document.createElement('div');
 	var ul = document.createElement('ul');
