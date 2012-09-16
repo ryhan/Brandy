@@ -5,7 +5,7 @@
  * Built by Ryhan Hassan
  */
 
-
+$(document).ready(function(){
 // Hide the address bar
 var hideAddressBar = function (){
 	if(!window.location.hash){
@@ -29,4 +29,5 @@ $('#search').focus( function(){
 	});*/
 	window.scrollTo(0, 1);
 	//document.body.setAttribute('data-view', 'search');
+});
 });

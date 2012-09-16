@@ -8,6 +8,7 @@
 // Key-Value pairing for Twitter handle occupancy
 var twitterStore = {};
 
+jQuery(document).ready(function($) {
 // Check if a value is valid
 var notEmpty = function(v){ return (v!=undefined && v!=null); };
 
@@ -47,4 +48,4 @@ function twitterLookup(handle, success)
 	  success : function(data){ return success(data);}
 	});
 }
-
+}); //document.ready

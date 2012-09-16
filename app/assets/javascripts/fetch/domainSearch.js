@@ -13,6 +13,8 @@ var urlify = function(s){ return 'http://' + s;};
 // Check if a value is valid
 var notEmpty = function(v){ return (v!=undefined && v!=null); };
 
+jQuery(document).ready(function($) {
+
 /*
  * isValidUrl
  * Returns a boolean determining whether 
@@ -59,4 +61,4 @@ function yqlLookup(url, success)
 	  success : function(data){ return success(data);}
 	});
 }
-
+}); //document.ready

@@ -1,5 +1,5 @@
 /* Search Controller */
-
+$(document).ready(function(){
 // Store all search related values in this object
 var searchModel = {};
 
@@ -136,7 +136,7 @@ function loading(){
 	var spinner = new Spinner(opts).spin(target);
 }
 loading();
-
+});
 /*
 function searchCtrl($scope)
 {
